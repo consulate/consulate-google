@@ -21,7 +21,6 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "passport": "~0.1.17",
     "passport-google": "~0.3.0",
     "simple-debug": "~1.1.0"
   },

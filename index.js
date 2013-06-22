@@ -15,11 +15,9 @@ module.exports = function(options, getUserByGoogleOrCreate) {
   var path = options.path || '/login/google';
   delete options.path;
 
-  debug('registering google passport strategy with options', options)
-
-  passport.use(new GoogleStrategy(options, getUserByGoogleOrCreate));
-
   return function(app) {
+    debug('registering google passport strategy with options', options);
+    app.register(new GoogleStrategy(options, getUserByGoogleOrCreate));
     app.get(path, app.authenticate('google'), app.viewCallback('login'));
   };
 };
