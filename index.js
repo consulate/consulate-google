@@ -2,7 +2,6 @@
  * Module dependencies
  */
 var debug = require('simple-debug')('consulate-google')
-  , passport = require('passport')
   , GoogleStrategy = require('passport-google').Strategy;
 
 /**
